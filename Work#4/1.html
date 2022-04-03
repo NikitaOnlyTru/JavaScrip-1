@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work#4</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        
+        let a = Number(prompt('Введите целое число в диапазоне [0 ... 999]'))
+
+        function filNum (a){
+            if(!Number.isInteger(a) || a < 0 || a > 999){
+                console.log('Значение должно быть целым числом в диапазоне [0 ... 999]');
+                return {};
+            }
+
+            return {
+                units: a % 10,
+                tens: Math.floor(a / 10) % 10,
+                hundereds: Math.floor(a / 100)
+            }
+        }
+
+        console.log(filNum(a));
+    </script>
+</body>
+</html>

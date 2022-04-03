@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work#4</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+        class A {
+            constructor(param1){
+                this.param1 = param1;
+            }
+
+            show(){
+                alert(this.param1);
+            }
+        }
+
+        class B extends A {
+            constructor(param1, param2){
+                super(this.param1);
+                this.param2 = param2;
+            }
+
+            show2(){
+                alert(this.param2);
+            }
+        }
+
+        let obj1 = new B('text1', 'text2');
+        obj1.show();
+        obj1.show2();
+    </script>
+</body>
+</html>
